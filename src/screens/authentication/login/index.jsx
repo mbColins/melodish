@@ -19,7 +19,7 @@ const LoginScreen = () => {
       <View>
         <Text style={styles.title}>{t('welcomeScreen.Login')}</Text>
       </View>
-      <View style={{ marginTop: 20 }}>
+      <View style={styles.formContainer}>
         <FormInput
           control={control}
           name="username"
@@ -55,6 +55,12 @@ const LoginScreen = () => {
           <Text style={styles.signUpBtn}> {t('welcomeScreen.Sign_up')} </Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.forgotPass}>
+        <Text>{t('welcomeScreen.forgotPass')}</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('forgotpass')}>
+          <Text style={styles.signUpBtn}> {t('welcomeScreen.fogotPassText')} </Text>
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 };
@@ -69,5 +75,7 @@ const styles = StyleSheet.create({
   btnContainer: { display: 'flex', alignItems: 'center', marginVertical: 10, flexDirection: 'column', gap: 10, padding: 40 },
   btnText: { color: '#fff'},
   footerBtn:{display:'flex',flexDirection:'row',gap:10,justifyContent:'center'},
+  forgotPass:{display:'flex',flexDirection:'row',gap:10,justifyContent:'center',marginTop:20},
   signUpBtn:{color:'blue'},
+  formContainer:{ marginTop: 20 },
 });

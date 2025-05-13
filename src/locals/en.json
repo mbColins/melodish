@@ -8,7 +8,9 @@
     "login_with_google":"Login with google",
     "sign_up_description":"Don't yet have and account ?",
     "have_account":"Already have an account ?",
-    "sign_in":"Sign in"
+    "sign_in":"Sign in",
+    "forgotPass":"forgot password ?",
+    "fogotPassText":"Press hear"
   },
   "authentication":{
     "user_name": "User name",
