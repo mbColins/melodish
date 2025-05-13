@@ -20,7 +20,7 @@ const RootNavigation = () => {
       }} />
       <Stack.Screen name="home" component={HomeScreen} />
       <Stack.Screen name="login" component={LoginScreen} options={{headerShown:false}}/>
-      <Stack.Screen name="registration" component={RegistrationScreen} />
+      <Stack.Screen name="registration" component={RegistrationScreen} options={{headerShown:false}} />
       <Stack.Screen name="welcome" component={WellComeScreen} options={{headerShown:false}} />
     </Stack.Navigator>
   );

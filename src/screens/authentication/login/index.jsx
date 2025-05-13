@@ -1,8 +1,8 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import FormInput from '../../../components/TextInput';
 import { useForm } from 'react-hook-form';
-import { ChevronLeft, Facebook, RectangleGogglesIcon } from 'lucide-react-native';
+import {  Facebook} from 'lucide-react-native';
 import { useNavigation } from '@react-navigation/native';
 import AuthHeader from '../../../components/AuthHeader';
 import { useTranslation } from 'react-i18next';
@@ -14,7 +14,7 @@ const LoginScreen = () => {
 
   const onSubmit = (data) => { console.log(data); };
   return (
-    <View>
+    <ScrollView>
       <AuthHeader />
       <View>
         <Text style={styles.title}>{t('welcomeScreen.Login')}</Text>
@@ -23,14 +23,14 @@ const LoginScreen = () => {
         <FormInput
           control={control}
           name="username"
-          placeholder="User name"
+          placeholder= {t('authentication.user_name')}
           rules={{ required: true }}
           errors={errors}
         />
         <FormInput
           control={control}
           name="password"
-          placeholder="Password"
+          placeholder={t('authentication.password')}
           rules={{ required: true }}
           errors={errors}
         />
@@ -50,12 +50,12 @@ const LoginScreen = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.footerBtn}>
-        <Text>don't yet have and account.?</Text>
+        <Text>{t('welcomeScreen.sign_up_description')}</Text>
         <TouchableOpacity onPress={() => navigation.navigate('registration')}>
-          <Text style={{color:'blue'}}>Sign up</Text>
+          <Text style={styles.signUpBtn}> {t('welcomeScreen.Sign_up')} </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -68,5 +68,6 @@ const styles = StyleSheet.create({
   gooleBtn: { alignItems: 'center', width: 200, height: 25, borderRadius: 10, display: 'flex', justifyContent: 'center', backgroundColor: 'red', flexDirection: 'row' },
   btnContainer: { display: 'flex', alignItems: 'center', marginVertical: 10, flexDirection: 'column', gap: 10, padding: 40 },
   btnText: { color: '#fff'},
-  footerBtn:{display:'flex',flexDirection:'row',gap:10,justifyContent:'center'}
+  footerBtn:{display:'flex',flexDirection:'row',gap:10,justifyContent:'center'},
+  signUpBtn:{color:'blue'},
 });

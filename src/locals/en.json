@@ -5,7 +5,18 @@
     "Login":"Login",
     "Sign_up":"Sign Up",
     "loging_with_facebook":"Login with facebook",
-    "login_with_google":"Login with google"
+    "login_with_google":"Login with google",
+    "sign_up_description":"Don't yet have and account ?",
+    "have_account":"Already have an account ?",
+    "sign_in":"Sign in"
+  },
+  "authentication":{
+    "user_name": "User name",
+    "password":"Password",
+    "firstName":"Name",
+    "phone_number":"Phone Number",
+    "email":"Email",
+    "register":"Register"
   }
 }
   
