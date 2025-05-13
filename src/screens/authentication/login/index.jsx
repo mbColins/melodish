@@ -2,29 +2,59 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import FormInput from '../../../components/TextInput';
 import { useForm } from 'react-hook-form';
-import { ChevronLeft } from 'lucide-react-native';
+import { ChevronLeft, Facebook, RectangleGogglesIcon } from 'lucide-react-native';
 import { useNavigation } from '@react-navigation/native';
+import AuthHeader from '../../../components/AuthHeader';
+import { useTranslation } from 'react-i18next';
 
 const LoginScreen = () => {
   const { control, handleSubmit, formState: { errors } } = useForm();
   const navigation = useNavigation();
+  const { t } = useTranslation();
 
   const onSubmit = (data) => { console.log(data); };
   return (
     <View>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <ChevronLeft size={40} color={'#000'} />
-        </TouchableOpacity>
-
+      <AuthHeader />
+      <View>
+        <Text style={styles.title}>{t('welcomeScreen.Login')}</Text>
       </View>
-      <FormInput
-        control={control}
-        name="firstName"
-        placeholder="First name"
-        rules={{ required: true }}
-        errors={errors}
-      />
+      <View style={{ marginTop: 20 }}>
+        <FormInput
+          control={control}
+          name="username"
+          placeholder="User name"
+          rules={{ required: true }}
+          errors={errors}
+        />
+        <FormInput
+          control={control}
+          name="password"
+          placeholder="Password"
+          rules={{ required: true }}
+          errors={errors}
+        />
+      </View>
+      <View style={styles.btnContainer}>
+        <TouchableOpacity style={styles.loginBtn}>
+          <Text style={styles.btnText}>{t('welcomeScreen.Login')}</Text>
+        </TouchableOpacity>
+        <Text>or</Text>
+        <TouchableOpacity style={styles.facebookBtn}>
+          <Facebook color={'#fff'} size={20} />
+          <Text style={styles.btnText}>{t('welcomeScreen.loging_with_facebook')}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.gooleBtn}>
+          <Facebook color={'#fff'} size={20} />
+          <Text style={styles.btnText}>{t('welcomeScreen.login_with_google')}</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.footerBtn}>
+        <Text>don't yet have and account.?</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('registration')}>
+          <Text style={{color:'blue'}}>Sign up</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -32,14 +62,11 @@ const LoginScreen = () => {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
-  header: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 10,
-    backgroundColor:'green',
-    borderBottomRightRadius:25,
-    height:100,
-  },
+  title: { textAlign: 'center', fontSize: 25, fontWeight: '500', marginVertical: 10 },
+  loginBtn: { backgroundColor: 'green', alignItems: 'center', width: 200, height: 25, borderRadius: 10, display: 'flex', justifyContent: 'center' },
+  facebookBtn: { alignItems: 'center', width: 200, height: 25, borderRadius: 10, display: 'flex', justifyContent: 'center', borderColor: 'blue', flexDirection: 'row', backgroundColor: 'blue' },
+  gooleBtn: { alignItems: 'center', width: 200, height: 25, borderRadius: 10, display: 'flex', justifyContent: 'center', backgroundColor: 'red', flexDirection: 'row' },
+  btnContainer: { display: 'flex', alignItems: 'center', marginVertical: 10, flexDirection: 'column', gap: 10, padding: 40 },
+  btnText: { color: '#fff'},
+  footerBtn:{display:'flex',flexDirection:'row',gap:10,justifyContent:'center'}
 });

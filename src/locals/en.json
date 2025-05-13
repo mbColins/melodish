@@ -3,7 +3,9 @@
     "wlecome_msge":"WelCome To Melodish",
     "order":"Order food from your Fav restaurants",
     "Login":"Login",
-    "Sign_up":"Sign Up"
+    "Sign_up":"Sign Up",
+    "loging_with_facebook":"Login with facebook",
+    "login_with_google":"Login with google"
   }
 }
   

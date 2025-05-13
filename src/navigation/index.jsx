@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator()
 const RootNavigation = () => {
   return (
     <Stack.Navigator initialRouteName="landing" screenOptions={{
-        statusBarBackgroundColor:'green'
+        statusBarBackgroundColor:'green',
     }}>
       <Stack.Screen name="landing" component={LandingScreen} options={{
         headerShown:false,
