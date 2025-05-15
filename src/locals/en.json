@@ -1,5 +1,7 @@
 {
+  "submit_btn":"Submit",
   "welcomeScreen":{
+    "registration_":"Registration",
     "wlecome_msge":"WelCome To Melodish",
     "order":"Order food from your Fav restaurants",
     "Login":"Login",
@@ -18,7 +20,14 @@
     "firstName":"Name",
     "phone_number":"Phone Number",
     "email":"Email",
-    "register":"Register"
+    "register":"Register",
+    "provide_email":"Enter your email",
+    "submit":"Submit",
+    "forgot_pass":"You wil shortly recieve and otp to the above provided email",
+    "new_pass":"Enter the new Password",
+    "new_pass_word":"New Password",
+    "confirm_pass":"Confrim Password",
+    "forgot_title_":"Forgot password"
   }
 }
   

@@ -5,6 +5,9 @@ import FormInput from '../../../components/TextInput';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
+import Button from '../../../components/Button';
+import TextBtn from '../../../components/TextBtn';
+import Titles from '../../../components/Titles';
 
 const RegistrationScreen = () => {
   const { control, handleSubmit, formState: { errors } } = useForm();
@@ -16,7 +19,7 @@ const RegistrationScreen = () => {
   return (
     <ScrollView>
       <AuthHeader />
-      <Text style={styles.title}>Registration</Text>
+     <Titles text={t('welcomeScreen.registration_')}/>
       <View style={styles.formContainer}>
         <FormInput
           control={control}
@@ -59,16 +62,10 @@ const RegistrationScreen = () => {
         />
       </View>
       <View style={styles.btnConatiner}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('home')}
-          style={styles.registeBtn}>
-          <Text style={styles.btnText}> {t('authentication.register')} </Text>
-        </TouchableOpacity>
+        <Button text={t('authentication.register')} onPress={() => navigation.navigate('login')}/>
         <View style={styles.footerBtn}>
           <Text> {t('welcomeScreen.have_account')} </Text>
-          <TouchableOpacity>
-            <Text style={styles.signUpTxt}> {t('welcomeScreen.sign_in')} </Text>
-          </TouchableOpacity>
+          <TextBtn text={t('welcomeScreen.sign_in')} onPress={() => navigation.navigate('login')} />
         </View>
       </View>
     </ScrollView>
@@ -80,9 +77,9 @@ export default RegistrationScreen;
 const styles = StyleSheet.create({
   title: { textAlign: 'center', fontWeight: '500', fontSize: 20, marginVertical: 20 },
   formContainer: {},
-  btnConatiner: { alignItems: 'center', display: 'flex', flexDirection: 'column', gap: 10 },
+  btnConatiner: { alignItems: 'center', display: 'flex', flexDirection: 'column', gap: 10,marginTop:30 },
   registeBtn: { backgroundColor: 'green', width: 200, alignItems: 'center', height: 25, justifyContent: 'center', borderRadius: 10, marginVertical: 20 },
   btnText: { color: '#fff' },
   signUpTxt: { color: 'blue' },
-  footerBtn: { display: 'flex', flexDirection: 'row', gap: 10 }
+  footerBtn: { display: 'flex', flexDirection: 'row', gap: 10 },
 });

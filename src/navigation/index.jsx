@@ -8,6 +8,7 @@ import LoginScreen from '../screens/authentication/login'
 import RegistrationScreen from '../screens/authentication/registration'
 import WellComeScreen from '../screens/welcom'
 import ForgotPasswordScreen from '../screens/authentication/forgotpassword'
+import ResetPasswordScreen from '../screens/authentication/resetpassword'
 
 const Stack = createNativeStackNavigator()
 
@@ -23,6 +24,7 @@ const RootNavigation = () => {
       <Stack.Screen name="login" component={LoginScreen} options={{headerShown:false}}/>
       <Stack.Screen name="registration" component={RegistrationScreen} options={{headerShown:false}} />
       <Stack.Screen name="forgotpass" component={ForgotPasswordScreen} options={{headerShown:false}} />
+      <Stack.Screen name="resetPass" component={ResetPasswordScreen} options={{headerShown:false}} />
       <Stack.Screen name="welcome" component={WellComeScreen} options={{headerShown:false}} />
     </Stack.Navigator>
   );
