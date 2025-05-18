@@ -9,6 +9,7 @@ import RegistrationScreen from '../screens/authentication/registration'
 import WellComeScreen from '../screens/welcom'
 import ForgotPasswordScreen from '../screens/authentication/forgotpassword'
 import ResetPasswordScreen from '../screens/authentication/resetpassword'
+import BottomTabs from './BottomTabs'
 
 const Stack = createNativeStackNavigator()
 
@@ -16,11 +17,16 @@ const RootNavigation = () => {
   return (
     <Stack.Navigator initialRouteName="landing" screenOptions={{
         statusBarBackgroundColor:'green',
+        headerShown:false,
     }}>
       <Stack.Screen name="landing" component={LandingScreen} options={{
         headerShown:false,
       }} />
-      <Stack.Screen name="home" component={HomeScreen} />
+      <Stack.Screen name="home" component={BottomTabs} options={{headerShown:false,title:'',
+        headerLeft:() => {
+          <Text>Hello</Text>
+        },
+      }}/>
       <Stack.Screen name="login" component={LoginScreen} options={{headerShown:false}}/>
       <Stack.Screen name="registration" component={RegistrationScreen} options={{headerShown:false}} />
       <Stack.Screen name="forgotpass" component={ForgotPasswordScreen} options={{headerShown:false}} />

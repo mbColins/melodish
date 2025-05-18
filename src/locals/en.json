@@ -27,7 +27,9 @@
     "new_pass":"Enter the new Password",
     "new_pass_word":"New Password",
     "confirm_pass":"Confrim Password",
-    "forgot_title_":"Forgot password"
+    "forgot_title_":"Forgot password",
+    "modalText":"Verifying your data...",
+    "modalTextRegistration":"Submitting your data"
   }
 }
-  
+    

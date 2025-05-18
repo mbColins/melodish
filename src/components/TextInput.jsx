@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput as RNTextInput } from 'react-native';
 import React from 'react';
 import { Controller } from 'react-hook-form';
 
-const FormInput = ({ control, name, rules = {}, placeholder, errors,inputMode }) => {
+const FormInput = ({ control, name, rules = {}, placeholder, errors,inputMode,secureTextEntry,otherStyle }) => {
     return (
         <View style={styles.container}>
             <Controller
@@ -12,13 +12,14 @@ const FormInput = ({ control, name, rules = {}, placeholder, errors,inputMode })
                 rules={rules}
                 render={({ field: { onChange, onBlur, value } }) => (
                     <RNTextInput
-                        style={styles.input}
+                        style={[styles.input,otherStyle]}
                         placeholder={placeholder}
                         placeholderTextColor={'#000'}
                         onBlur={onBlur}
                         onChangeText={onChange}
                         value={value}
                         inputMode={inputMode}
+                        secureTextEntry={secureTextEntry}
                     />
                 )}
             />
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     container: {
         marginVertical: 8,
         alignContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     input: {
         borderBottomWidth: 1,
@@ -41,8 +42,7 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         padding: 10,
         width: '90%',
-
-
+        color:'#000',
     },
     errorText: {
         color: 'red',
