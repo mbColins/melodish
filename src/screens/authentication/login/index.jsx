@@ -25,17 +25,17 @@ const LoginScreen = () => {
 
 
   const onSubmit = async (formData) => {
-    setModalVisible(true);
-    try {
-      const result = await authUser(formData).unwrap();
-      console.log('Login successful');
-      setModalVisible(false);
+    // setModalVisible(true);
+    // try {
+    //   const result = await authUser(formData).unwrap();
+    //   console.log('Login successful');
+    //   setModalVisible(false);
       navigation.navigate('home');
-    } catch (err) {
-      Alert.alert('Error', 'yes');
-    } finally {
-      setModalVisible(false);
-    }
+    // } catch (err) {
+    //   Alert.alert('Error', 'yes');
+    // } finally {
+    //   setModalVisible(false);
+    // }
   };
 
 
@@ -45,7 +45,7 @@ const LoginScreen = () => {
     <ScrollView style={styles.container}>
       <AuthHeader />
       <View>
-        <Titles text={t('welcomeScreen.Login')} />
+        <Titles text={t('welcomeScreen.Login')} textStyle={styles.titleText}/>
       </View>
       <View style={styles.formContainer}>
         <View>
@@ -117,4 +117,5 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   optionBtn: { paddingTop: 20, position: 'absolute', right: 20 },
   inputAndIcon: { display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 },
+  titleText:{textAlign:'center'}
 });

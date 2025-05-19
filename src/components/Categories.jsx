@@ -1,7 +1,7 @@
 import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-const menuIMage = require('../assets/images/j.png');
+const menuIMage = require('../assets/images/melodish_icon.png');
 
 const categories = [
     {
@@ -63,5 +63,6 @@ export default Categories;
 const styles = StyleSheet.create({
     img: { height: 70, width: 70, borderRadius: 50 },
     catName: { textAlign: 'center' },
-    catContainer: { margin: 5 },
+    catContainer: { margin: 5,shadowColor: 'green',
+    shadowOffset: {width: 0,height: 2} },
 });

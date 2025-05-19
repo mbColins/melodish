@@ -16,7 +16,7 @@ const ResetPasswordScreen = () => {
     return (
         <View style={styles.container}>
             <AuthHeader />
-           <Titles text={t('authentication.new_pass')} />
+           <Titles text={t('authentication.new_pass')} textStyle={styles.textStyle} />
             <View style={styles.formContainer}>
                 <FormInput
                     control={control}
@@ -42,5 +42,6 @@ export default ResetPasswordScreen;
 
 const styles = StyleSheet.create({
     container: { flex: 1 },
-    formContainer:{display:'flex',flexDirection:'column',gap:10,marginBottom:40},
+    formContainer:{display:'flex',flexDirection:'column',gap:10,marginBottom:40,marginTop:40},
+    textStyle:{textAlign:'center'},
 });

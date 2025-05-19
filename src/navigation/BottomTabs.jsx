@@ -3,7 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/home';
-import { Home } from 'lucide-react-native';
+import { Home,Search } from 'lucide-react-native';
+import SearchScreen from '../screens/searchscreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,7 +15,12 @@ const BottomTabs = () => {
         tabBarLabel:'Home',
         headerShown:false,
         tabBarIcon:() => <Home/>,
-        tabBarLabelStyle:{color:'green'},
+        // tabBarActiveTintColor:'green',
+      }}/>
+      <Tab.Screen name="search" component={SearchScreen} options={{
+        tabBarLabel:'search',
+        headerShown:false,
+        tabBarIcon:() => <Search/>,
       }}/>
     </Tab.Navigator>
   );
@@ -22,4 +28,3 @@ const BottomTabs = () => {
 
 export default BottomTabs;
 
-const styles = StyleSheet.create({});

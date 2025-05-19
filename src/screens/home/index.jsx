@@ -1,14 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import HomeHeader from '../../components/HomeHeader';
 import Categories from '../../components/Categories';
+import FilteredItemComponent from '../../components/FilteredItemComponent';
+import MostPopular from '../../components/MostPopular';
+import MapBtn from '../../components/MapBtn';
+import SpecialCusines from '../../components/SpecialCusines';
 
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <HomeHeader/>
-      <Categories/>
-      <Text>HomeScreen</Text>
+      <HomeHeader />
+      <ScrollView>
+        <Categories />
+        <FilteredItemComponent />
+        <SpecialCusines/>
+        <MostPopular />
+      </ScrollView>
+      <MapBtn />
     </View>
   );
 };
@@ -16,5 +25,5 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  container:{backgroundColor:'#fff'},
+  container: { flex: 1, backgroundColor: '#fff' },
 });

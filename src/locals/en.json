@@ -29,7 +29,14 @@
     "confirm_pass":"Confrim Password",
     "forgot_title_":"Forgot password",
     "modalText":"Verifying your data...",
-    "modalTextRegistration":"Submitting your data"
+    "modalTextRegistration":"Submitting your data",
+    "submit_otp":"submit otp",
+    "otp_placeholder":"Enter otp"
+  },
+  "homeScreen":{
+    "cusines":"cusines",
+    "most_popular":"Most Popular",
+    "special_cusines":"Special cusines"
   }
 }
     

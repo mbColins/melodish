@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-const Titles = ({text}) => {
+const Titles = ({text,textStyle}) => {
   return (
     <View>
-      <Text style={styles.title}>{text}</Text>
+      <Text style={[styles.title,textStyle]}>{text}</Text>
     </View>
   );
 };
@@ -12,5 +12,5 @@ const Titles = ({text}) => {
 export default Titles;
 
 const styles = StyleSheet.create({
-    title:{ textAlign: 'center', fontWeight: '500', fontSize: 20, marginVertical: 20 },
+    title:{fontWeight: '500', fontSize: 20,marginTop:20},
 });
