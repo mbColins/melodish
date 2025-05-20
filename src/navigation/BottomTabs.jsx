@@ -3,8 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/home';
-import { Home,Search } from 'lucide-react-native';
+import { CookingPot, Home,Search } from 'lucide-react-native';
 import SearchScreen from '../screens/searchscreen';
+import CusinesScreen from '../screens/cusines';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,11 +18,18 @@ const BottomTabs = () => {
         tabBarIcon:() => <Home/>,
         // tabBarActiveTintColor:'green',
       }}/>
+          <Tab.Screen name="cusines" component={CusinesScreen} options={{
+        tabBarLabel:'cusines',
+        headerShown:false,
+        tabBarIcon:() => <CookingPot/>,
+      }}/>
       <Tab.Screen name="search" component={SearchScreen} options={{
         tabBarLabel:'search',
         headerShown:false,
         tabBarIcon:() => <Search/>,
       }}/>
+
+  
     </Tab.Navigator>
   );
 };

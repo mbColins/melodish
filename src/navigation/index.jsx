@@ -11,6 +11,9 @@ import ForgotPasswordScreen from '../screens/authentication/forgotpassword'
 import ResetPasswordScreen from '../screens/authentication/resetpassword'
 import BottomTabs from './BottomTabs'
 import MapScreen from '../screens/mapscreen'
+import RestaurantScreen from '../screens/restaurants'
+import FoodPerCategoryScreen from '../screens/foodpercategory'
+import MenuDetailsScreen from '../screens/menudetails'
 
 const Stack = createNativeStackNavigator()
 
@@ -34,6 +37,9 @@ const RootNavigation = () => {
       <Stack.Screen name="resetPass" component={ResetPasswordScreen} options={{headerShown:false}} />
       <Stack.Screen name="welcome" component={WellComeScreen} options={{headerShown:false}} />
       <Stack.Screen name="maps" component={MapScreen} options={{headerShown:false}} />
+      <Stack.Screen name="resto" component={RestaurantScreen} options={{headerShown:false}} />
+      <Stack.Screen name="food" component={FoodPerCategoryScreen} options={{headerShown:false}} />
+      <Stack.Screen name="menu_details" component={MenuDetailsScreen} options={{headerShown:false}} />
     </Stack.Navigator>
   );
 }

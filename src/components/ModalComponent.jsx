@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Modal, Pressable, Alert, ActivityIndicator, Saf
 import React, { useState } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-const ModalComponent = ({ modalVisible, onPress,isLoading,modalText,login}) => {
+const ModalComponent = ({ modalVisible, onPress,isLoading,modalText,login,forgotPass}) => {
 
   return (
     <SafeAreaProvider>

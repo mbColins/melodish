@@ -3,11 +3,11 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const Button = ({text,onPress}) => {
+const Button = ({text,onPress,btnStyle}) => {
     const { t } = useTranslation();
   return (
     <View style={styles.btnContainer}>
-      <TouchableOpacity onPress={onPress} style={styles.btn}>
+      <TouchableOpacity onPress={onPress} style={[btnStyle,styles.btn]}>
         <Text style={{color:'#fff'}}>{text}</Text>
       </TouchableOpacity>
     </View>
