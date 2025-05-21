@@ -8,7 +8,6 @@ const FormInput = ({ control, name, rules = {}, placeholder, errors,inputMode,se
         <View style={styles.container}>
             <Controller
                 control={control}
-                name={name}
                 rules={rules}
                 render={({ field: { onChange, onBlur, value } }) => (
                     <RNTextInput
@@ -22,6 +21,7 @@ const FormInput = ({ control, name, rules = {}, placeholder, errors,inputMode,se
                         secureTextEntry={secureTextEntry}
                     />
                 )}
+                  name={name}
             />
             {errors?.[name] && <Text style={styles.errorText}>This field is required.</Text>}
         </View>

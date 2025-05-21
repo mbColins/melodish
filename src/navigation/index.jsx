@@ -14,6 +14,8 @@ import MapScreen from '../screens/mapscreen'
 import RestaurantScreen from '../screens/restaurants'
 import FoodPerCategoryScreen from '../screens/foodpercategory'
 import MenuDetailsScreen from '../screens/menudetails'
+import CartScreen from '../screens/cart'
+import OrdersCreen from '../screens/orders'
 
 const Stack = createNativeStackNavigator()
 
@@ -40,6 +42,8 @@ const RootNavigation = () => {
       <Stack.Screen name="resto" component={RestaurantScreen} options={{headerShown:false}} />
       <Stack.Screen name="food" component={FoodPerCategoryScreen} options={{headerShown:false}} />
       <Stack.Screen name="menu_details" component={MenuDetailsScreen} options={{headerShown:false}} />
+      <Stack.Screen name="cart" component={CartScreen} options={{headerShown:false}} />
+      <Stack.Screen name="orders" component={OrdersCreen} options={{headerShown:false}} />
     </Stack.Navigator>
   );
 }
