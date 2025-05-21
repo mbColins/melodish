@@ -75,7 +75,7 @@ const MenuDetailsScreen = () => {
 
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: 20, marginTop: 30 }}>
                 <Text style={{ justifyContent: 'center', borderWidth: 1, borderRadius: 10, padding: 4, width: '30%', textAlign: 'center' }}>120FCFA</Text>
-                <Button text={t('add_to_cart')} />
+                <Button text={t('add_to_cart')} onPress={() => navigation.navigate('cart')}/>
             </View>
 
 
