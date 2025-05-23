@@ -26,7 +26,9 @@ const BottomTabs = () => {
       <Tab.Screen name="search" component={SearchScreen} options={{
         tabBarLabel:'search',
         headerShown:false,
-        tabBarIcon:() => <Search/>,
+        tabBarIcon:({focused,color,size}) => (<Search color={color} size={size}/>),
+         tabBarActiveTintColor: 'green',
+         tabBarInactiveTintColor: 'green',
       }}/>
 
   

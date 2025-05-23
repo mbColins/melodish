@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import { Alert, Modal, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import React, { useState } from 'react';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -6,12 +7,16 @@ import FormInput from '../../../components/TextInput';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/core';
-import { Cross, X } from 'lucide-react-native';
+import { Cross, Minus, Plus, X } from 'lucide-react-native';
+import PressableBtn from '../../../components/PressableBtn';
 
-const ForgorPassModal = ({ modalVisible, onPress,closeModal }) => {
+const ForgorPassModal = ({ modalVisible, onPress,closeModal,cart ,item_quantity,decrement,increment}) => {
     const { control, handleSubmit, formState: { errors } } = useForm();
     const navigation = useNavigation();
     const { t } = useTranslation();
+
+
+
     return (
         <SafeAreaProvider>
             <SafeAreaView style={styles.centeredView}>
@@ -35,6 +40,27 @@ const ForgorPassModal = ({ modalVisible, onPress,closeModal }) => {
                         </View>
                     </View>
                 </Modal>
+               {cart &&  <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={onPress}>
+                    <View style={styles.centeredView}>
+                        <View style={styles.modalView}>
+                             <Pressable style={styles.close} onPress={closeModal}>
+                                <X />
+                            </Pressable>
+                           <Text>fried rice</Text>
+                           <View style={{display:'flex',flexDirection:'row',gap:20,marginVertical:15}}>
+                            <PressableBtn btnText={<Minus size={17}/>} onPress={decrement}/>
+                            <Text>{item_quantity}</Text>
+                            <PressableBtn btnText={<Plus size={17}/>} onPress={increment}/>
+                           </View>
+                            <Button text={t('cartScreen.update_item')} onPress={closeModal}/>
+                                < PressableBtn  btnText={t('cartScreen.remove_item')}  textStyle={styles.btnTextStyle}/>
+                        </View>
+                    </View>
+                </Modal>}
             </SafeAreaView>
         </SafeAreaProvider>
     );
@@ -88,4 +114,6 @@ const styles = StyleSheet.create({
     },
     otherStyle: { width: 200, marginBottom: 50 },
     close:{position:'absolute',right:20,paddingTop:10},
+    // close1:{position:'absolute',buttom:10},
+    btnTextStyle:{color:'red',marginVertical:20},
 });

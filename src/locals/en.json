@@ -37,6 +37,12 @@
     "cusines":"cusines",
     "most_popular":"Most Popular",
     "special_cusines":"Special cusines"
+  },
+  "cartScreen":{
+    "update_item": "update item",
+    "remove_item": "remove item",
+    "my_cart": "My cart",
+    "place_order": "Place order"
   }
 }
     
