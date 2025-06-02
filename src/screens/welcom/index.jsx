@@ -4,13 +4,16 @@ import React from 'react'
 import { BookOpenCheckIcon, Globe } from 'lucide-react-native'
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
+import { switchLanguage } from '../../utilities/SwitchLangauge';
 
 const WellComeScreen = () => {
     const navigation = useNavigation();
     const { t } = useTranslation();
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.language}>
+            <TouchableOpacity
+            onPress={() => switchLanguage('fr')}
+            style={styles.language}>
                 <Globe color={'green'} size={20} />
             </TouchableOpacity>
             <BookOpenCheckIcon color={'green'} size={'70px'} style={styles.welcomeIcon} />

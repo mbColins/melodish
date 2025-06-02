@@ -1,48 +1,81 @@
 {
-  "submit_btn":"Submit",
-  "welcomeScreen":{
-    "registration_":"Registration",
-    "wlecome_msge":"WelCome To Melodish",
-    "order":"Order food from your Fav restaurants",
-    "Login":"Login",
-    "Sign_up":"Sign Up",
-    "loging_with_facebook":"Login with facebook",
-    "login_with_google":"Login with google",
-    "sign_up_description":"Don't yet have and account ?",
-    "have_account":"Already have an account ?",
-    "sign_in":"Sign in",
-    "forgotPass":"forgot password ?",
-    "fogotPassText":"Press hear"
+  "submit_btn": "Submit",
+  "welcomeScreen": {
+    "registration_": "Registration",
+    "wlecome_msge": "WelCome To Melodish",
+    "order": "Order food from your Fav restaurants",
+    "Login": "Login",
+    "Sign_up": "Sign Up",
+    "loging_with_facebook": "Login with facebook",
+    "login_with_google": "Login with google",
+    "sign_up_description": "Don't yet have and account ?",
+    "have_account": "Already have an account ?",
+    "sign_in": "Sign in",
+    "forgotPass": "forgot password ?",
+    "fogotPassText": "Press hear"
   },
-  "authentication":{
+  "authentication": {
     "user_name": "User name",
-    "password":"Password",
-    "firstName":"Name",
-    "phone_number":"Phone Number",
-    "email":"Email",
-    "register":"Register",
-    "provide_email":"Enter your email",
-    "submit":"Submit",
-    "forgot_pass":"You wil shortly recieve and otp to the above provided email",
-    "new_pass":"Enter the new Password",
-    "new_pass_word":"New Password",
-    "confirm_pass":"Confrim Password",
-    "forgot_title_":"Forgot password",
-    "modalText":"Verifying your data...",
-    "modalTextRegistration":"Submitting your data",
-    "submit_otp":"submit otp",
-    "otp_placeholder":"Enter otp"
+    "password": "Password",
+    "firstName": "Name",
+    "phone_number": "Phone Number",
+    "email": "Email",
+    "register": "Register",
+    "provide_email": "Enter your email",
+    "submit": "Submit",
+    "forgot_pass": "You wil shortly recieve and otp to the above provided email",
+    "new_pass": "Enter the new Password",
+    "new_pass_word": "New Password",
+    "confirm_pass": "Confrim Password",
+    "forgot_title_": "Forgot password",
+    "modalText": "Verifying your data...",
+    "modalTextRegistration": "Submitting your data",
+    "submit_otp": "submit otp",
+    "otp_placeholder": "Enter otp"
   },
-  "homeScreen":{
-    "cusines":"cusines",
-    "most_popular":"Most Popular",
-    "special_cusines":"Special cusines"
+  "homeScreen": {
+    "cusines": "cusines",
+    "most_popular": "Most Popular",
+    "special_cusines": "Special cusines"
   },
-  "cartScreen":{
+  "cartScreen": {
     "update_item": "update item",
     "remove_item": "remove item",
     "my_cart": "My cart",
     "place_order": "Place order"
+  },
+  "orderScreen": {
+    "my_orders": "My Orders",
+    "re_order": "re order",
+    "accepted": "accepted",
+    "order_history":"Order history"
+  },
+  "profile_screen": {
+    "account_details": "Account details",
+    "favourite_restaurants": "Favourite restaurants",
+    "order_history": "Order history",
+    "settings": "Settings",
+    "contact_us": "contact us",
+    "log_out": "log out",
+    "contact": "Contact",
+    "our_address": "our address",
+    "email_us": "Email us",
+    "call_us": "Call us",
+    "setting": "Setting",
+    "profile": "profile",
+    "security": "security",
+    "enable_face_id": "Enable Face ID",
+    "touchId_login": "Touch ID Login",
+    "turned_off": "While turned off yo will still be able to login with your password",
+    "push_notification": "push notification",
+    "order_update": "Order updates",
+    "new_arrivals": "New Arrivals",
+    "promotions": "Promotions",
+    "sales_alert": "Sales alerts",
+    "account": "account",
+    "support": "support",
+    "edith_profile": "Edith profile",
+    "public_profile": "Public profile",
+    "private_details": "Private details"
   }
 }
-    

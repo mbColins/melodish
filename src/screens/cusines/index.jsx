@@ -7,7 +7,7 @@ import { Header } from '@react-navigation/elements';
 import { ChevronLeft, ShoppingCart } from 'lucide-react-native';
 import { useNavigation } from '@react-navigation/core';
 
-const img = require('../../assets/images/j.png');
+const img = require('../../assets/images/food5.jpg');
 
 const cusines = [
     {
@@ -80,7 +80,7 @@ const CusinesScreen = () => {
                             onPress={() => navigation.navigate('food', {name: item.name})}
                             key={index} style={styles.flatListContainer}>
                             <ImageBackground source={item.image} style={styles.cusinImg}>
-                                <Text>{item.name}</Text>
+                                <Text style={{color:'#fff'}}>{item.name}</Text>
                             </ImageBackground>
                         </TouchableOpacity>
                     )}

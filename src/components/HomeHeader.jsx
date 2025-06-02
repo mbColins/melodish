@@ -16,9 +16,9 @@ const HomeHeader = () => {
              <TouchableOpacity>
                 <ShoppingCart color={'gray'}/>
             </TouchableOpacity>
-             <TouchableOpacity style={{justifyContent:'center'}}>
+             {/* <TouchableOpacity style={{justifyContent:'center'}}>
                 <Image source={require('../assets/images/j.png')} style={styles.profileImage}/>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
            </View>
         </View>
     );

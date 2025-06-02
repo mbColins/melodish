@@ -7,8 +7,9 @@ import { useTranslation } from 'react-i18next';
 import { useNavigation, useRoute } from '@react-navigation/core';
 import Titles from '../../components/Titles';
 import { ChevronLeft } from 'lucide-react-native';
+import CusinesComponents from '../../components/Cusines';
 
-const img = require('../../assets/images/j.png');
+const img = require('../../assets/images/food5.jpg');
 
 
 const datas = [
@@ -104,20 +105,18 @@ const FoodPerCategoryScreen = () => {
                         <Text style={{ paddingVertical: 2 }}>cusines</Text>
                     </Pressable>)}
             />
+            {/* name,index,description,image,price */}
             <FlatList
                 data={datas}
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item, index }) => (
-                    <Pressable onPress={() => navigation.navigate('menu_details', { name: item.name })} key={index} style={{ backgroundColor: '#fff', margin: 2 }}>
-                        <View style={styles.productContain}>
-                            <View style={{ width: '70%' }}>
-                                <Titles text={item.name} textStyle={styles.textStyle} />
-                                <Text>{item.description}</Text>
-                            </View>
-                            <Image source={item.image} style={styles.imgStyle} />
-                        </View>
-                        <Text style={{ paddingLeft: 10 }}>{item.price}</Text>
-                    </Pressable>
+                   <CusinesComponents
+                   name={item.name}
+                   index={index}
+                   description={item.description}
+                   image={item.image}
+                   price={item.price}
+                   />
                 )}
             />
 

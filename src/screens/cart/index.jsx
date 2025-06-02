@@ -74,7 +74,7 @@ const CartScreen = () => {
         />
       </View>
       <View style={{ alignItems: 'center', position: 'absolute', width: '100%', top: '370%' }}>
-        <PressableBtn btnText={t('cartScreen.place_order')} btnStyle={styles.btnStyle} textStyle={styles.textStyle} onPress={() => navigation.navigate('orders')} />
+        <PressableBtn btnText={t('cartScreen.place_order')} btnStyle={styles.btnStyle} textStyle={styles.textStyle} onPress={() => navigation.navigate('checkout')} />
       </View>
       <ForgorPassModal 
       modalVisible={modalVisible} 
